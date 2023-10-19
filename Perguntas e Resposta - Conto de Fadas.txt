@@ -1,0 +1,37 @@
+Como selecionar os nomes dos personagens do tipo 'Herói'?
+
+SELECT nome
+FROM personagem
+WHERE tipo_personagem_id = (SELECT id FROM tipo_personagem WHERE descricao = 'Herói');
+
+Como selecionar o nome e a data de nascimento dos autores?
+
+SELECT nome, data_nascimento
+FROM autor;
+
+Como selecionar os nomes dos personagens e o tipo de cada um deles?
+
+SELECT p.nome AS Nome_Personagem, tp.descricao AS Tipo_Personagem
+FROM personagem p
+INNER JOIN tipo_personagem tp ON p.tipo_personagem_id = tp.id;
+
+Qual a sintaxe correta para selecionar todos os campos da tabela 'autor'?
+
+SELECT * FROM autor;
+
+Qual a sintaxe correta para criar uma view que exibe o nome e a data de nascimento dos autores?
+
+CREATE VIEW view_autores AS
+SELECT nome, data_nascimento
+FROM autor;
+
+Qual a sintaxe correta para selecionar todos os campos da tabela 'conto_de_fadas' ordenados por título em ordem alfabética?
+
+SELECT * FROM conto_de_fadas
+ORDER BY titulo;
+
+Qual a sintaxe correta para selecionar todos os campos da tabela 'conto_de_fadas' ordenados por título em ordem alfabética?
+
+SELECT * FROM conto_de_fadas
+ORDER BY titulo;
+
